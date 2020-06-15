@@ -21,4 +21,4 @@ for MacOS :- ```pip3 install -r requirements.txt```
                                   reset
                                   
                                  
-5.After you are done click ExitPlayer and the player will close               
+5.After you are done click 'Exit Player' and the player will close               

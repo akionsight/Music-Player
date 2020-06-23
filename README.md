@@ -8,7 +8,7 @@ for MacOS :- ```pip3 install -r requirements.txt```
 
 ## Running the program
 1. Run the ```Music_Player.py``` file.
-2. A Prompt will ask for the file path or click the browse file button to browse the file.
+2. A Prompt will ask for the file path or click the browse file button to browse the file (some non-copyrighted music is included in the `example music` folder)
 3. Click OK.
 4. the audio player will come and then you can :-
 

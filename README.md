@@ -22,3 +22,11 @@ for MacOS :- ```pip3 install -r requirements.txt```
                                   
                                  
 5.After you are done click 'Exit Player' and the player will close               
+
+## How to it all works!!
+see the Pygame library is used to develop games (if you are reading you must know that) and it is pretty obvious that it games have music 𝄞. And because they have music there must be some way to play it 🥁. So, Pygame has the mixer class that can be accessed by 
+
+```python
+from pygame import mixer
+```
+now the mixer class has the functions for Playing music, Pausing Music, Unpausing music and resetting the music. 

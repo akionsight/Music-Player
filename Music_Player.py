@@ -8,8 +8,7 @@ file = get_file()
 if file != '':
 
     player = tkr.Tk()
-
-    player.title('audio player')
+    player.title('Music player')
     player.geometry('205x340')
 
     def play():
@@ -18,8 +17,9 @@ if file != '':
         pygame.mixer.music.load(file)
         pygame.mixer.music.play()
 
-    def ExitPlayer():
+    def Reset():
         pygame.mixer.music.stop()
+        pygame.mixer.music.play()
 
     def Pause():
         pygame.mixer.music.pause()
@@ -31,7 +31,7 @@ if file != '':
     button1 = tkr.Button(player,width=5,height=3,text='Play', command=play)
     button1.pack(fill='x')
 
-    button2 = tkr.Button(player,width=5,height=3,text='Reset',command=ExitPlayer)
+    button2 = tkr.Button(player,width=5,height=3,text='Reset',command=Reset)
     button2.pack(fill='x')
 
     button3 = tkr.Button(player,width=5,height=3,text='Pause',command=Pause)

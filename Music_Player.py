@@ -9,9 +9,8 @@ if file != '':
 
     player = tkr.Tk()
     player.title('Music player')
-    player.geometry('205x340')
-
-    def play():
+    player.geometry("205x350")
+    def Play():
         pygame.init()
         pygame.mixer.init()
         pygame.mixer.music.load(file)
@@ -26,9 +25,12 @@ if file != '':
 
     def Unpause():
         pygame.mixer.music.unpause()
-    def EXITWINDOW():
+    def ExitWindow():
+        window_current_size = f'{player.winfo_width()}x{player.winfo_height()}'
+        with open("size.txt", "a") as file:
+            file.write(window_current_size)
         exit()
-    button1 = tkr.Button(player,width=5,height=3,text='Play', command=play)
+    button1 = tkr.Button(player,width=5,height=3,text='Play', command=Play)
     button1.pack(fill='x')
 
     button2 = tkr.Button(player,width=5,height=3,text='Reset',command=Reset)
@@ -40,7 +42,7 @@ if file != '':
     button4 = tkr.Button(player,width=5,height=3,text='Unpause',command=Unpause)
     button4.pack(fill='x')
 
-    button5 = tkr.Button(player,width=5,height=3,text='Exit Player',command=EXITWINDOW)
+    button5 = tkr.Button(player,width=5,height=3,text='Exit Player',command=ExitWindow)
     button5.pack(fill='x')
 
 

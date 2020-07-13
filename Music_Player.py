@@ -4,12 +4,14 @@ from get_file import get_file
 import PySimpleGUI
 import os
 from pathlib import Path
+from tkinter import PhotoImage
 file = get_file()
 if file != '':
 
     player = tkr.Tk()
     player.title('Music player')
     player.geometry("205x350")
+    player.iconbitmap("logo.ico")
     def Play():
         pygame.init()
         pygame.mixer.init()
@@ -26,9 +28,6 @@ if file != '':
     def Unpause():
         pygame.mixer.music.unpause()
     def ExitWindow():
-        window_current_size = f'{player.winfo_width()}x{player.winfo_height()}'
-        with open("size.txt", "a") as file:
-            file.write(window_current_size)
         exit()
     button1 = tkr.Button(player,width=5,height=3,text='Play', command=Play)
     button1.pack(fill='x')

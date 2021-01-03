@@ -27,3 +27,5 @@ see the Pygame library is used to develop games (if you are reading you must kno
 from pygame import mixer
 ```
 now the mixer class has the functions for Playing music, Pausing Music, Unpausing music and resetting the music. 
+
+hope you like it
